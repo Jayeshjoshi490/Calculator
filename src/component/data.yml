@@ -1,0 +1,20 @@
+const data = [
+    { id: "Clear", value: "Clear", method: '${handleClick}', name:"Clear"},
+    { id: "backspace", value: "C", method:"clear", name: "C"},
+    { id: "divide", value: "/", method:"handleClick", name: "/"},
+    { id: "seven", value: "7", method:"handleClick", name:"7"},
+    { id: "eight", value: "8", method:"handleClick", name:"8"},
+    { id: "nine", value: "9", method:"handleClick", name:"9"},
+    { id: "multiply", value: "*", method:"handleClick", name:"*"},
+    { id: "four", value: "4", method:"handleClick", name:"4"},
+    { id: "five", value: "5", method:"handleClick", name:"5"},
+    { id: "six", value: "6", method:"handleClick", name:"6"},
+    { id: "subtract", value: "-", method:"handleClick", name:"-"},
+    { id: "one", value: "1", method:"handleClick", name:"1"},
+    { id: "two", value: "2", method:"handleClick", name:"2"},
+    { id: "three", value: "3", method:"handleClick", name:"3"},
+    { id: "plus", value: "+", method:"handleClick", name:"+"},
+    { id: "zero", value: "0", method:"handleClick", name:"0"},
+    { id: "dot", value: ".", method:"handleClick", name:"."},
+    { id: "result", value: "=", method:"calculate", name:"equal"}
+  ];
