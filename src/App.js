@@ -1,10 +1,10 @@
-import React,{useState} from 'react'
+import React from 'react'
 import './App.css'
-import Calculator from './component/Calculator'
+import CalculatorContainer from './component/CalculatorContainer'
 
 function App() {
   return (
-    <Calculator />
+    <CalculatorContainer />
   )
 }
 
