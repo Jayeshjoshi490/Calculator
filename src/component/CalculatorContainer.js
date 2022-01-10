@@ -43,9 +43,6 @@ const CalculatorContainer = () => {
     return (
         <>
             <div className='container'>
-                {/* <form>
-                    <input type="text" value={Result} readOnly/>
-                </form> */}
                 <Display result={Result}/>
                 <div className="keypad">
                     {num.map((btn) => (
