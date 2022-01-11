@@ -3,13 +3,14 @@ import Keypad from './keypad';
 import Display from './display'
 import num from './button'
 
-const CalculatorContainer = () => {
+const CalculatorContainer = (props) => {
     const[Result, setResult] = useState("");
     
     const handleClick = (e) => {
         switch (e.target.name) {
             case "Clear":
               setResult("")
+              props.clearHistory();
               break;
             case "C":
               setResult(previous => previous.slice(0, previous.length - 1));
@@ -30,7 +31,8 @@ const CalculatorContainer = () => {
               break;
             case "=":
               try{
-                  setResult(eval(Result).toString())
+                props.historyEvent(Result);
+                  setResult(eval(Result).toString());
                 }catch(err){
                   setResult("Error!!")
               }
@@ -42,14 +44,12 @@ const CalculatorContainer = () => {
     }
     return (
         <>
-            <div className='container'>
-                <Display result={Result}/>
-                <div className="keypad">
-                    {num.map((btn) => (
-                        <Keypad key={btn.id} id={btn.id} name={btn.name} handleClick={handleClick}/>
-                    ))}
-                </div> 
-            </div>
+            <Display result={Result}/>
+            <div className="keypad">
+                {num.map((btn) => (
+                    <Keypad key={btn.id} id={btn.id} name={btn.name} handleClick={handleClick}/>
+                ))}
+            </div> 
         </>
     )
 }

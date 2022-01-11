@@ -10,6 +10,7 @@ body{
 .container{
     top: 50%;
     left: 50%;
+    height: 385px;
     position: absolute;
     transform: translate(-50%,-50%);
     margin: 0 auto;
@@ -27,7 +28,7 @@ body{
 input[type="text"]{
     height: 75px;
     width: 88%;
-    background-color: rgba(255,255,255,0.1);
+    background-color: transparent;
     border: 0;
     color: #fff;
     text-align: right;
@@ -51,4 +52,22 @@ button{
 }
 button:hover{
     background-color: rgba(255,255,255,0.1);
+    border: 3px inset black;
+}
+.icon{
+    text-align: right;
+    position: absolute;
+    right: 5px;
+}
+.icon:hover{
+    background-color: transparent;
+    border: none;
+}
+.history{
+    text-align: right;
+    color: white;
+    width:88%;
+    margin: auto;
+    height: 405px;
+    overflow-y: auto;
 }
